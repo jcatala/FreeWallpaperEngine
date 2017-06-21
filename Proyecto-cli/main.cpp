@@ -1,29 +1,31 @@
 #include <iostream>
 #include <unistd.h>
+#include <
 #include "environment.h"
 #include "modules.h"
 #include "libss.h"
 
 using namespace std;
 
-int main()
-{
+int main(int argc, char *argv[]){
+
+
+    cout << argv[1] << " " << argv[2];
+
+
     system("pwd > path.txt");
     cout << " - DESKTOP ENVIORMENT SUPPORTED:" << endl;
     cout << "|\t\t[1] GNOME" << endl;
     cout << "|\t\t[2] KDE/PLASMA5" << endl;
 
-    int selected;
-    cin >> selected;
-
+    string selected = argv[1];
 
     cout << " -  Select modules to use:" << endl << endl << endl;
     system("ls modules | grep mod");
 
 
     /*MODULO A USAR*/
-    string inuse;
-    cin >> inuse;
+    string inuse = argv[2];
 
     string dir_module = "modules/" + inuse; //direccion del modulo
 
@@ -65,7 +67,7 @@ int main()
     }
 
 
-    if(selected == 1){
+    if(selected == "GNOME"){
         Environment* env = new  Environment("GNOME", "gsettings set org.gnome.desktop.background picture-uri ");
         cout << endl << env->getCommand();
 
@@ -77,7 +79,7 @@ int main()
 
     }
 
-    if(selected == 2){
+    if(selected == "KDE4"){
         ifstream patharch;              //PATHARCHIVO
         patharch.open("path.txt");
         string path;

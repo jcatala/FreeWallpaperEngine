@@ -5,9 +5,11 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     modules.cpp \
-    environment.cpp
+    environment.cpp \
+    corethread.cpp
 
 HEADERS += \
     modules.h \
     environment.h \
-    libss.h
+    libss.h \
+    corethread.h
