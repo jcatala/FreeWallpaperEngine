@@ -77,6 +77,7 @@ int main(int argc, char *argv[])
        /*####### CORE #########*/
         int flag = 1;
         int maximo = img_name.size();
+        int slip = stoi(argv[3]);
         chrono::seconds sche(stoi(argv[3]));
         while(true){
             string core = env->getCommand() + mod->getNameAt(flag-1);
@@ -86,6 +87,7 @@ int main(int argc, char *argv[])
                 flag = 1;
             }
             this_thread::sleep_for(sche);
+            //sleep(slip);
         }
 
     }
