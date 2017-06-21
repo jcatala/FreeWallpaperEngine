@@ -1,1 +1,1 @@
-/home/jose/usm/2017-1/poo/proyecto-cli/Proyecto-cli
+/home/jose/usm/2017-1/poo/proyecto-cli/git-things/Proyecto-cli
