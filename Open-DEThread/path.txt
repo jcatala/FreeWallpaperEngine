@@ -1,1 +1,1 @@
-/home/jose/usm/2017-1/poo/proyecto-cli/git-things/Open-DEThread
+/home/telematic-man/GIT/Proyecto POO/Open-DEThread

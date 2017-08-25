@@ -1,1 +1,1 @@
-/home/jose/usm/2017-1/poo/proyecto-cli/git-things/build-Open-DEThread-Desktop-Release
+/home/telematic-man/GIT/Proyecto POO/build-Open-DEThread-Desktop-Release
