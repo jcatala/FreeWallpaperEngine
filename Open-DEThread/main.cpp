@@ -89,8 +89,37 @@ int main(int argc, char *argv[])
             this_thread::sleep_for(sche);
             //sleep(slip);
         }
-
     }
+    if(entorno == "GNOME" || entorno == "gnome"){
+        ifstream pathlocal;
+        pathlocal.open("path.txt");
+        string path;
+        if(pathlocal.is_open()){
+            getline(pathlocal,path);
+        }
+        pathlocal.close();
+        string command = "gsettings set org.gnome.desktop.background picture-uri file://"+path+"/modules/"+module+"/";
+        Environment* env = new Environment(entorno, command);
+        double schedule = stod(argv[3]);
+        Modules* mod = new Modules(img_name,schedule);
+
+        /*####### CORE #########*/
+         int flag = 1;
+         int maximo = img_name.size();
+         int slip = stoi(argv[3]);
+         chrono::seconds sche(stoi(argv[3]));
+         while(true){
+             string core = env->getCommand() + mod->getNameAt(flag-1);
+             system(core.c_str());
+             flag++;
+             if(flag == mod->getTotal()){
+                 flag = 1;
+             }
+             this_thread::sleep_for(sche);
+             //sleep(slip);
+    }
+    }
+
 
 
 
