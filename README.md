@@ -15,6 +15,12 @@ Formato de las imágenes:
         thumbXXX.png
     Las imágenes irán rotando cíclicamente
     
+Para compilar
+```
+$g++ *.cpp *.h -o ejecutable
+```
+
+
 Para ejecutar
 ```
 $./ejecutable <"Ambiente de escritorio"> <"Módulo a utilizar"> <Tiempo de refresco en segundos>
@@ -27,6 +33,6 @@ $./ejecutable <"Ambiente de escritorio"> <"Módulo a utilizar"> <Tiempo de refre
     
     ```
     KDE         (working)
-    GNOME       (dev)
+    GNOME       (testing)
     XFCE        (dev)
     ```
